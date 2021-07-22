@@ -1,0 +1,24 @@
+#! /bin/sh
+
+# autostart
+bspc config top_padding 20
+grep -x sxhkd > /dev/null || sxhkd &
+
+# customization
+bspc config focused_border_color "#911919"
+bspc config normal_border_color "#120c0c"
+bspc config border_width         2
+bspc config window_gap          12
+
+# user config
+bspc monitor -d TERM WWW IM VG MISC
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+
+
+$HOME/.config/polybar/launch.sh 
+
